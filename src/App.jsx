@@ -1,13 +1,24 @@
-import React from "react";
-import Card from "./components/Card";
-import Header from "./components/Header";
-import Drawer from "./components/Drawer";
+import React from 'react';
+import Card from './components/Card';
+import Header from './components/Header';
+import Drawer from './components/Drawer';
+
+const arr = [
+  {
+    name: 'Мужские Кроссовки Nike Blazer Mid Suede',
+    price: 12999,
+  },
+  {
+    name: 'Мужские Кроссовки Nike Air Max 270',
+    price: 14200,
+  },
+];
 
 function App() {
   return (
     <>
       <div className="wrapper clear">
-        <Drawer />
+        <Drawer />л
         <Header />
         <div className="content p-40">
           <div className="d-flex align-center justify-between mb-40">
@@ -19,10 +30,9 @@ function App() {
           </div>
 
           <div className="d-flex">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {arr.map((obj) => (
+              <Card />
+            ))}
           </div>
         </div>
       </div>
